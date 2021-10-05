@@ -2482,9 +2482,9 @@ button {
         }
     }
 
-    // &__form-block {
-    //     display: none;
-    // } 
+    &__form-block {
+        display: none;
+    } 
 }
 
 .form {
@@ -2736,6 +2736,20 @@ button {
 
             .checkbox-custom:checked + .checkbox-custom-label {
                 color: #ffffff;
+            }
+        }
+    }
+}
+
+.promocode {
+    .form__input {
+        input {
+            &:invalid {
+                border: 1px solid #EB5757;
+            }
+
+            &:valid {
+                border: 1px solid #00FA9A;
             }
         }
     }

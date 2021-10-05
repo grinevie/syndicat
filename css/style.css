@@ -2574,6 +2574,9 @@ button:focus {
     margin-top: 37px;
   }
 }
+.footer__form-block {
+  display: none;
+}
 
 .form__row {
   display: -webkit-box;
@@ -2741,7 +2744,7 @@ button:focus {
 .form.material .form__input input:focus ~ label,
 .form.material .form__input input:valid ~ label {
   font-size: 14px;
-  line-height: 19px;
+  line-height: 14px;
   top: 0;
   -webkit-transform: none;
           transform: none;
@@ -2849,6 +2852,13 @@ button:focus {
 }
 .form__policy .checkbox .checkbox-custom:checked + .checkbox-custom-label {
   color: #ffffff;
+}
+
+.promocode .form__input input:invalid {
+  border: 1px solid #EB5757;
+}
+.promocode .form__input input:valid {
+  border: 1px solid #00FA9A;
 }
 
 .dropdown {
