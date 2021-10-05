@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- plugins and scripts at the bottom of this page -->
 </head>
-
     <body>
         <header class="header">
             <div class="container">
@@ -424,7 +423,7 @@
 
         <footer class="footer" id="footer">
             <div class="container">
-                <div class="footer__content">
+                <!-- <div class="footer__content">
                     <div class="footer__content--info">
                         <div class="footer__content--title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
                             Введите промокод, чтобы вступить в клуб
@@ -435,7 +434,7 @@
                         <form action="#" class="footer__content--form form promocode">
                             <div class="form__row">
                                 <div class="form__input">
-                                    <input type="text" placeholder="27FRWDFST" minlength="9" maxlength="9" required>
+                                    <input type="text" placeholder="27FRWDFST" minlength="9" maxlength="9">
                                 </div>
                                 <div class="form__button">
                                     <button class="button-3">
@@ -448,7 +447,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> -->
                 <div class="footer__form-block">
                     <div class="footer__content--info">
                         <div class="footer__content--title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
@@ -457,27 +456,30 @@
                         <div class="footer__content--subtitle wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
                             Мы рассмотрим вашу заявку в течении 24 часов
                         </div>
-                        <form action="#" class="footer__content--form form material" id="form-sheet">
+                        <form class="footer__content--form form material" role="form" id="test-form">
                             <div class="form__row">
                                 <div class="form__input">
-                                    <input type="text" name="form_field_1" autocomplete="off" required>
+                                    <input type="text" name="field_1" autocomplete="off">
                                     <hr>
                                     <label>Имя и Фамилия</label>
                                 </div>
                                 <div class="form__input">
-                                    <input type="text" name="form_field_2" autocomplete="off" required>
+                                    <input type="text" name="filed_2" autocomplete="off">
                                     <hr>
                                     <label>Дата рождения (дд.мм.гггг)</label>
                                 </div>
                                 <div class="form__input">
-                                    <input type="text" name="form_field_3" autocomplete="off" required>
+                                    <input type="text" name="code" placeholder="27FRWDFST" minlength="6" maxlength="9">
+                                </div>
+                                <!-- <div class="form__input">
+                                    <input type="text" name="field_3" autocomplete="off">
                                     <hr>
                                     <label>Никнейм в Telegram</label>
-                                </div>
+                                </div> -->
                             </div>
-                            <div class="form__row">
+                            <!-- <div class="form__row">
                                 <div class="form__input">
-                                    <input type="tel" name="form_field_4" autocomplete="off" required>
+                                    <input type="text" name="field_4" autocomplete="off">
                                     <hr>
                                     <label>Телефон</label>
                                 </div>
@@ -505,19 +507,19 @@
                                     </div>
                                 </div>
                                 <div class="form__input">
-                                    <input type="text" name="form_field_6" autocomplete="off" required>
+                                    <input type="text" name="field_6" autocomplete="off">
                                     <hr>
                                     <label>Сфера профессиональной деятельности</label>
                                 </div>
                             </div>
                             <div class="form__row">
                                 <div class="form__input">
-                                    <input type="text" name="form_field_7" autocomplete="off" required>
+                                    <input type="text" name="field_7" autocomplete="off">
                                     <hr>
                                     <label>Ваши сильные качества (не менее 3)</label>
                                 </div>
                                 <div class="form__input">
-                                    <input type="text" name="form_field_8" autocomplete="off" required>
+                                    <input type="text" name="field_8" autocomplete="off">
                                     <hr>
                                     <label>Какие качества вы хотели бы приобрести либо прокачать ?</label>
                                 </div>
@@ -552,7 +554,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form__row">
                                 <div class="form__button">
                                     <button class="button-3" type="submit" id="submit-form">

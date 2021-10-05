@@ -2574,9 +2574,6 @@ button:focus {
     margin-top: 37px;
   }
 }
-.footer__form-block {
-  display: none;
-}
 
 .form__row {
   display: -webkit-box;
@@ -2961,6 +2958,40 @@ button:focus {
   margin-left: 0;
   color: #060910;
   margin-bottom: 0;
+}
+
+.success {
+  background: #060910;
+  padding: 192px 0 70px;
+  position: relative;
+  height: 100vh;
+}
+@media (max-width: 992px) {
+  .success {
+    padding: 81px 0 30px;
+  }
+}
+.success__title {
+  text-align: center;
+}
+.success__text {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  color: #FFFFFF;
+  max-width: 970px;
+  text-align: center;
+  margin: 0 auto 50px;
+}
+@media (max-width: 570px) {
+  .success__text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 40px;
+  }
+}
+.success .button-3 {
+  margin: auto;
 }
 
 @-webkit-keyframes scroll {
