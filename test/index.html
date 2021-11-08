@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Syndicate - private community club</title>
+    <title>Syndicat - private community club</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="Description" content="">
     <meta name="Keywords" content="">
@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/animate.css"> 
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <!-- plugins and scripts at the bottom of this page -->
 </head>
@@ -47,7 +47,7 @@
             <div class="container">
                 <div class="offer__content">
                     <h1 class="offer__title wow fadeInLeft" data-wow-duration="1.4s" data-wow-delay="0.2s">
-                        Syndicate, <span>Private</span> Community Club
+                        Syndicat, <span>Private</span> community club
                     </h1>
                     <div class="offer__description wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.6s">
                         СИНДИКАТ КЛУБ - сообщество, которое помогает предпринимателям расширять социальные связи, прокачивать сознание, развивать команду и приумножать свой доход.
@@ -202,7 +202,7 @@
                                     </div>
                                     <div class="founder__item--name wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
                                         Максим <br>Тербов
-                                        <span>Основатель клуба Syndicate</span>
+                                        <span>Основатель клуба Syndicat</span>
                                     </div>
                                     <div class="founder__item--text">
                                         <ul>
@@ -245,7 +245,7 @@
                                     </div>
                                     <div class="founder__item--name wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
                                         Алексей <br>Никитинский
-                                        <span>Основатель клуба Syndicate</span>
+                                        <span>Основатель клуба Syndicat</span>
                                     </div>
                                     <div class="founder__item--text">
                                         <ul>
@@ -423,124 +423,161 @@
 
         <footer class="footer" id="footer">
             <div class="container">
-                <div class="footer__content">
-                    <div class="footer__content--info">
-                        <div class="footer__content--title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
-                            Введите промокод, чтобы вступить в клуб
-                        </div>
-                        <div class="footer__content--subtitle wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
-                            Если у вас нет промокода, вы можете получить его у одного из участников клуба!
-                        </div>
-                        <form action="#" class="footer__content--form form promocode">
-                            <div class="form__row">
-                                <div class="form__input">
-                                    <input type="text" name="code" id="promocode" placeholder="27FRWDFST" minlength="9" maxlength="9" required>
+
+                <form action="backend/send_form.php" method="POST">
+                    <div class="footer__content">
+                        <div class="footer__content--info">
+                            <div class="footer__content--title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
+                                Введите промокод, чтобы вступить в клуб
+                            </div>
+                            <div class="footer__content--subtitle wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
+                                Если у вас нет промокода, вы можете получить его у одного из участников клуба!
+                            </div>
+                            <div class="footer__content--form form promocode">
+                                <div class="form__row">
+                                    <div class="form__input">
+                                        <input type="text" name="Promocode" id="promocode" placeholder="27FRWDFST" minlength="9" maxlength="9" required>
+                                    </div>
+                                    <div class="form__button">
+                                        <button type="button" id="next" class="button-3">
+                                            Далее
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="form__button">
-                                    <button type="button" id="next" class="button-3">
-                                        Далее
-                                    </button>
+                                <div class="form__error">
+                                    Вы ввели неверный промокод
                                 </div>
                             </div>
-                            <div class="form__error">
-                                Вы ввели неверный промокод
-                            </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-                <div class="footer__form-block">
-                    <div class="footer__content--info">
-                        <div class="footer__content--title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
-                            Заполните заявку для вступления в клуб
-                        </div>
-                        <div class="footer__content--subtitle wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
-                            Мы рассмотрим вашу заявку в течении 24 часов
-                        </div>
-                        <form class="footer__content--form form material" role="form" id="test-form">
-                            <div class="form__row">
-                                <div class="form__input">
-                                    <input type="text" name="Name" autocomplete="off" required>
-                                    <hr>
-                                    <label>Имя и Фамилия</label>
-                                </div>
-                                <div class="form__input">
-                                    <input type="text" name="Date" autocomplete="off" required>
-                                    <hr>
-                                    <label>Дата рождения (дд.мм.гггг)</label>
-                                </div>
-                                <div class="form__input">
-                                    <input type="text" name="NickName" autocomplete="off" required>
-                                    <hr>
-                                    <label>Никнейм в Telegram</label>
-                                </div>
+
+                    <div class="footer__form-block">
+                        <div class="footer__content--info">
+                            <div class="footer__content--title wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
+                                Заполните заявку для вступления в клуб
                             </div>
-                            <div class="form__row">
-                                <div class="form__input">
-                                    <input type="text" name="Phone" autocomplete="off" required>
-                                    <hr>
-                                    <label>Телефон</label>
-                                </div>
-                                <div class="form__select">
-                                    <select class="employment" name="Employment" placeholder="Профессиональная деятельность">
-                                        <option></option>
-                                        <option>Наёмный сотрудник</option>
-                                        <option>Предприниматель</option>
-                                        <option>Работаю в найме и развиваю бизнес</option>
-                                        <option>Не работаю</option>
-                                    </select>
-                                </div>
-                                <div class="form__input">
-                                    <input type="text" name="Sphere" autocomplete="off" required>
-                                    <hr>
-                                    <label>Сфера профессиональной деятельности</label>
-                                </div>
+                            <div class="footer__content--subtitle wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
+                                Мы рассмотрим вашу заявку в течении 24 часов
                             </div>
-                            <div class="form__row">
-                                <div class="form__input">
-                                    <input type="text" name="Skills" autocomplete="off" required>
-                                    <hr>
-                                    <label>Ваши сильные качества (не менее 3)</label>
+                            <div class="footer__content--form form material">
+                                <div class="form__row">
+                                    <div class="form__input">
+                                        <input type="text" name="Name" autocomplete="off" required>
+                                        <hr>
+                                        <label>Имя и Фамилия</label>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" name="Date" autocomplete="off" required>
+                                        <hr>
+                                        <label>Дата рождения (дд.мм.гггг)</label>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" name="NickName" autocomplete="off" required>
+                                        <hr>
+                                        <label>Никнейм в Telegram</label>
+                                    </div>
                                 </div>
-                                <div class="form__input">
-                                    <input type="text" name="Upgrade" autocomplete="off" required>
-                                    <hr>
-                                    <label>Какие качества вы хотели бы приобрести либо прокачать ?</label>
-                                </div>
-                                <div class="form__select">
+                                <div class="form__row">
+                                    <div class="form__input">
+                                        <input type="text" name="Phone" autocomplete="off" required>
+                                        <hr>
+                                        <label>Телефон</label>
+                                    </div>
                                     <div class="form__select">
-                                        <select class="interests" name="Interests" placeholder="Что наиболее интересно для вас ?">
-                                            <option></option>
-                                            <option>Развлечение и активное времяпровождение</option>
-                                            <option>Полезные знакомства</option>
-                                            <option>Бизнес-встречи</option>
-                                            <option>Обучающие мероприятия</option>
-                                            <option>Спорт</option>
-                                            <option>Путешествия</option>
-                                        </select>
+                                        <div class="dropdown">
+                                            <label class="dropdown-label">Профессиональная занятость</label>
+                                            <div class="dropdown-list">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Employment" class="check checkbox-custom" id="checkbox-custom_01" value="Наёмный сотрудник"/>
+                                                    <label for="checkbox-custom_01" class="checkbox-custom-label">Наёмный сотрудник</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Employment" class="check checkbox-custom" id="checkbox-custom_02" value="Предприниматель"/>
+                                                    <label for="checkbox-custom_02" class="checkbox-custom-label">Предприниматель</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Employment" class="check checkbox-custom" id="checkbox-custom_03" value="Работаю в найме и развиваю бизнес"/>
+                                                    <label for="checkbox-custom_03" class="checkbox-custom-label">Работаю в найме и развиваю бизнес</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Employment" class="check checkbox-custom" id="checkbox-custom_04" value="Не работаю"/>
+                                                    <label for="checkbox-custom_04" class="checkbox-custom-label">Не работаю</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" name="Sphere" autocomplete="off" required>
+                                        <hr>
+                                        <label>Сфера профессиональной деятельности</label>
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__input">
+                                        <input type="text" name="Skills" autocomplete="off" required>
+                                        <hr>
+                                        <label>Ваши сильные качества (не менее 3)</label>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="text" name="Upgrade" autocomplete="off" required>
+                                        <hr>
+                                        <label>Какие качества вы хотели бы приобрести либо прокачать ?</label>
+                                    </div>
+                                    <div class="form__select">
+                                        <div class="dropdown">
+                                            <label class="dropdown-label">Что наиболее интересно для вас ?</label>
+                                            <div class="dropdown-list">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Interests" class="check checkbox-custom" id="checkbox-1" value="Развлечение и активное времяпровождение"/>
+                                                    <label for="checkbox-1" class="checkbox-custom-label">Развлечение и активное времяпровождение</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Interests" class="check checkbox-custom" id="checkbox-2" value="Полезные знакомства"/>
+                                                    <label for="checkbox-2" class="checkbox-custom-label">Полезные знакомства</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Interests" class="check checkbox-custom" id="checkbox-3" value="Бизнес-встречи"/>
+                                                    <label for="checkbox-3" class="checkbox-custom-label">Бизнес-встречи</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Interests" class="check checkbox-custom" id="checkbox-4" value="Обучающие мероприятия"/>
+                                                    <label for="checkbox-4" class="checkbox-custom-label">Обучающие мероприятия</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Interests" class="check checkbox-custom" id="checkbox-5" value="Спорт"/>
+                                                    <label for="checkbox-5" class="checkbox-custom-label">Спорт</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="Interests" class="check checkbox-custom" id="checkbox-6" value="Путешествия"/>
+                                                    <label for="checkbox-6" class="checkbox-custom-label">Путешествия</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__row">
+                                    <div class="form__button">
+                                        <button class="button-3" type="submit" id="submit-form">
+                                            Отправить заявку
+                                        </button>
+                                    </div>
+                                    <div class="form__policy">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-policy" required/>
+                                            <label for="checkbox-policy" class="checkbox-custom-label">Я согласен с Правилами клуба СИНДИКАТ и обязуюсь соблюдать их</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form__row">
-                                <div class="form__button">
-                                    <button class="button-3" type="submit" id="submit-form">
-                                        Отправить заявку
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="footer__bottom">
                 <div class="container">
                     <div class="footer__bottom--content">
-                        <div class="footer__left">
-                            <div class="footer__logo">
-                                <img src="images/svg/header-logo.svg" alt="footer logo">
-                            </div>
-                            <div class="footer__copyright wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
-                                2021 © Syndicate
-                            </div>
+                        <div class="footer__logo">
+                            <img src="images/svg/footer-logo.svg" alt="footer logo">
                         </div>
                         <div class="footer__point wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
                             <span>Местонахождение</span>
@@ -557,14 +594,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="footer__right wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <span>Разработано в Санкт-Петербурге</span>
-                            <a href="https://colornew-world.com">
-                                ColorNew Company
-                                <div class="icon">
-                                    <img src="images/svg/arrow-up-right.svg" alt="arrow-up-right">
-                                </div>
-                            </a>
+                        <div class="footer__copyright wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.4s">
+                            2021 © Syndicat
                         </div>
                     </div>
                 </div>
@@ -584,28 +615,18 @@
             );
             wow.init();
 
-            $( "#next" ).click(function() {
-                let promocodeValue = $( "input#promocode" ).val();
+            $("#next").click(function() {
+                let promocodeValue = $("input#promocode").val();
 
-                $.get("check_promocode.php", {'promocode': promocodeValue})
+                $.get("backend/check_promocode.php", {'Promocode': promocodeValue})
                     .done(function (result) {
                         if (result === 'true') {
-                            $( ".footer__form-block" ).addClass("d-block");
-                            $( ".footer__content" ).addClass("d-none");
+                            $(".footer__form-block").addClass("d-block");
+                            $(".footer__content").addClass("d-none");
                         } else {
-                            $( ".form__error" ).css("opacity", "1");
+                            $(".form__error").css("opacity", "1");
                         }
                     });
-            });
-
-            $selectElement = $('.employment').select2({
-                placeholder: "Профессиональная деятельность",
-                allowClear: true
-            });
-
-            $selectElement = $('.interests').select2({
-                placeholder: "Что наиболее интересно для вас ?",
-                allowClear: true
             });
 
         </script>

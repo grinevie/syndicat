@@ -8,6 +8,12 @@ $("a.scroll-to").click(function() {
     return false;
 });
 
+// $( ".promocode .button-3" ).click(function() {
+//   $( ".footer__form-block" ).addClass("d-block");
+//   $( ".footer__content" ).addClass("d-none");
+// });
+
+
 //Form Sheet
 
 const id = 'AKfycbz-uAIvKFuT-SWsJJi4TXh0FIj9QF-VfzqFA_B5USY33JvjSDGA';
@@ -15,10 +21,10 @@ const URL = `https://script.google.com/macros/s/${id}/exec`;
 const form = document.querySelector("#test-form");
 const redirectUrl = 'success-page.html';
 
-form.onsubmit = (e) => {
+/*form.onsubmit = (e) => {
 	e.preventDefault();
 	const formData = new FormData(form);
-	const json = JSON.stringify({...Object.fromEntries(formData), promocode: $("input#promocode").val()});
+	const json = JSON.stringify(Object.fromEntries(formData));
 
 	fetch(URL, {
 		method: "post",
@@ -28,9 +34,10 @@ form.onsubmit = (e) => {
 		body: json
 	})
 		.then((res) => res.json())
-		.then(() => location.href='/success-page.html')
+		.then((res) => document.body.append(res.result))
 		.catch(err => document.body.append(err.message));
-};
+		history.pushState(null, null, redirectUrl);
+};*/
 
 //Custom select checkbox
 
@@ -107,3 +114,4 @@ function checkboxDropdown(el) {
   };
   
   checkboxDropdown('.dropdown'); 
+

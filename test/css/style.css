@@ -59,12 +59,6 @@ div {
           box-sizing: border-box;
 }
 
-section {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
-}
-
 ol,
 ul {
   list-style: none;
@@ -2569,7 +2563,7 @@ button:focus {
   font-size: 14px;
   line-height: 19px;
   color: #FFFFFF;
-  margin-top: 21px;
+  margin-left: auto;
 }
 @media (max-width: 992px) {
   .footer__copyright {
@@ -2577,56 +2571,11 @@ button:focus {
     line-height: 16px;
     margin-left: 0;
     color: rgba(255, 255, 255, 0.5);
-    margin-top: 0;
-    margin-bottom: 21px;
+    margin-top: 37px;
   }
 }
 .footer__form-block {
   display: none;
-}
-.footer__right {
-  max-width: 278px;
-  margin-left: auto;
-}
-@media (max-width: 992px) {
-  .footer__right {
-    margin-left: 0;
-    margin-top: 21px;
-  }
-}
-.footer__right span {
-  font-weight: 500;
-  display: block;
-  font-size: 16px;
-  line-height: 22px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 10px;
-}
-@media (max-width: 992px) {
-  .footer__right span {
-    font-size: 14px;
-    line-height: 19px;
-  }
-}
-.footer__right a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 27px;
-  color: #ED8853;
-  text-decoration: none;
-}
-.footer__right a:hover {
-  text-decoration: underline;
-}
-.footer__right a .icon {
-  margin-left: 7px;
-  margin-top: -2px;
 }
 
 .form__row {
@@ -2795,7 +2744,7 @@ button:focus {
 .form.material .form__input input:focus ~ label,
 .form.material .form__input input:valid ~ label {
   font-size: 14px;
-  line-height: 14px;
+  line-height: 19px;
   top: 0;
   -webkit-transform: none;
           transform: none;
@@ -2851,63 +2800,6 @@ button:focus {
 .form__select:last-child {
   margin-right: 0;
 }
-.form__select .select2-dropdown {
-  border: 1px solid #383838;
-}
-.form__select .select2-container {
-  width: 100% !important;
-}
-.form__select .select2-container:focus {
-  outline: none;
-}
-.form__select .select2-container .select2-selection--single {
-  border-radius: 0;
-  border: 0;
-  border-bottom: 2px solid #606166;
-  height: 69px;
-  max-height: 69px;
-  background: transparent;
-}
-.form__select .select2-container .select2-selection--single .select2-selection__rendered {
-  font-size: 16px;
-  line-height: 22px;
-  color: rgba(255, 255, 255, 0.3);
-  padding: 28px 30px 14px 0;
-}
-.form__select .select2-container .select2-selection--single .select2-selection__arrow {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.form__select .select2-container .select2-selection--single .select2-selection__arrow:before {
-  content: "";
-  display: block;
-  background: url("../images/svg/chevron-down.svg") no-repeat;
-  width: 24px;
-  height: 24px;
-}
-.form__select .select2-container .select2-selection--single .select2-selection__arrow b {
-  display: none;
-}
-.form__select .select2-container--open .select2-dropdown--below {
-  border: 1px solid #383838;
-  border-radius: 0;
-}
-.form__select .select2-container .select2-search--dropdown {
-  display: none;
-}
-.form__select .select2-container--default .select2-search--dropdown .select2-search__field {
-  border: 1px solid #383838;
-}
-.form__select .select__desc {
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 10px;
-}
 .form__policy {
   margin-left: 30px;
   margin-top: 19px;
@@ -2922,7 +2814,7 @@ button:focus {
             order: 0;
   }
 }
-.form__policy .radio .radio-custom-label {
+.form__policy .checkbox .checkbox-custom-label {
   font-size: 14px;
   line-height: 19px;
   margin-right: 0;
@@ -2931,12 +2823,12 @@ button:focus {
   margin-bottom: 0;
 }
 @media (max-width: 992px) {
-  .form__policy .radio .radio-custom-label {
+  .form__policy .checkbox .checkbox-custom-label {
     font-size: 10px;
     line-height: 14px;
   }
 }
-.form__policy .radio .radio-custom + .radio-custom-label:before {
+.form__policy .checkbox .checkbox-custom + .checkbox-custom-label:before {
   content: "";
   background: transparent;
   display: inline-block;
@@ -2946,20 +2838,19 @@ button:focus {
   width: 24px;
   height: 24px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 50px;
+  border-radius: 2px;
   margin-bottom: 0;
 }
-.form__policy .radio .radio-custom:checked + .radio-custom-label:after {
+.form__policy .checkbox .checkbox-custom:checked + .checkbox-custom-label:after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 5px;
-  background: #07090f;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: url("../images/svg/check-white.svg") no-repeat;
+  width: 24px;
+  height: 24px;
 }
-.form__policy .radio .radio-custom:checked + .radio-custom-label {
+.form__policy .checkbox .checkbox-custom:checked + .checkbox-custom-label {
   color: #ffffff;
 }
 
@@ -2986,7 +2877,7 @@ button:focus {
   display: none;
   z-index: 10;
 }
-.dropdown .radio {
+.dropdown .checkbox {
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
@@ -3023,7 +2914,7 @@ button:focus {
 .dropdown.open .dropdown-list {
   display: block;
 }
-.dropdown.open .radio {
+.dropdown.open .checkbox {
   -webkit-transition: 2s opacity 2s;
   transition: 2s opacity 2s;
   opacity: 1;
@@ -3033,22 +2924,22 @@ button:focus {
           transform: translateY(-50%) rotate(-180deg);
 }
 
-.radio {
+.checkbox {
   margin-bottom: 20px;
 }
-.radio:last-child {
+.checkbox:last-child {
   margin-bottom: 0;
 }
-.radio .radio-custom {
+.checkbox .checkbox-custom {
   display: none;
 }
-.radio .radio-custom-label {
+.checkbox .checkbox-custom-label {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   cursor: pointer;
 }
-.radio .radio-custom + .radio-custom-label:before {
+.checkbox .checkbox-custom + .checkbox-custom-label:before {
   content: "";
   background: transparent;
   display: inline-block;
@@ -3061,7 +2952,7 @@ button:focus {
   border-radius: 3px;
   margin-bottom: 0;
 }
-.radio .radio-custom:checked + .radio-custom-label:after {
+.checkbox .checkbox-custom:checked + .checkbox-custom-label:after {
   content: "";
   position: absolute;
   top: 0;
@@ -3070,7 +2961,7 @@ button:focus {
   width: 20px;
   height: 20px;
 }
-.radio .radio-custom-label {
+.checkbox .checkbox-custom-label {
   font-size: 16px;
   line-height: 16px;
   margin-right: 0;

@@ -62,11 +62,6 @@ div {
     box-sizing: border-box;
 }
 
-section {
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-
 ol,
 ul {
     list-style: none;
@@ -2476,64 +2471,20 @@ button {
         font-size: 14px;
         line-height: 19px;
         color: #FFFFFF;
-        margin-top: 21px;
+        margin-left: auto;
 
         @media (max-width: 992px) {
             font-size: 12px;
             line-height: 16px;
             margin-left: 0;
             color: rgba(255, 255, 255, 0.5);
-            margin-top: 0;
-            margin-bottom: 21px;
+            margin-top: 37px;
         }
     }
 
     &__form-block {
         display: none;
     } 
-
-    &__right {
-        max-width: 278px;
-        margin-left: auto;
-
-        @media (max-width: 992px) {
-            margin-left: 0;
-            margin-top: 21px;
-        }
-
-        span {
-            font-weight: 500;
-            display: block;
-            font-size: 16px;
-            line-height: 22px;
-            color: rgba(255, 255, 255, 0.5);
-            margin-bottom: 10px;
-
-            @media (max-width: 992px) {
-                font-size: 14px;
-                line-height: 19px;
-            }
-        }
-
-        a {
-            display: flex;
-            align-items: center;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 27px;
-            color: #ED8853;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-
-            .icon {
-                margin-left: 7px;
-                margin-top: -2px;
-            }
-        }
-    }
 }
 
 .form {
@@ -2682,7 +2633,7 @@ button {
             input:focus ~ label,
             input:valid ~ label {
                 font-size: 14px;
-                line-height: 14px;
+                line-height: 19px;
                 top: 0;
                 transform: none;
 
@@ -2731,76 +2682,6 @@ button {
         &:last-child {
             margin-right: 0;
         }
-
-        .select2-dropdown {
-            border: 1px solid #383838;
-        }
-
-        .select2-container {
-            width: 100%!important;
-
-            &:focus {
-                outline: none;
-            }
-
-            .select2-selection--single {
-                border-radius: 0;
-                border: 0;
-                border-bottom: 2px solid #606166;
-                height: 69px;
-                max-height: 69px;
-                background: transparent;
-
-                .select2-selection__rendered {
-                    font-size: 16px;
-                    line-height: 22px;
-                    color: rgba(255, 255, 255, 0.3);
-                    padding: 28px 30px 14px 0;
-                }
-
-                .select2-selection__arrow {
-                    position: absolute;
-                    width: 24px;
-                    height: 24px;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-
-                    &:before {
-                        content: '';
-                        display: block;
-                        background: url('../images/svg/chevron-down.svg') no-repeat;
-                        width: 24px;
-                        height: 24px;
-                    }
-                }
-
-                .select2-selection__arrow b {
-                    display: none;
-                }
-            }
-
-            &--open .select2-dropdown--below {
-                border: 1px solid #383838;
-                border-radius: 0;
-            }
-
-            .select2-search--dropdown {
-                display: none;
-            }
-        }
-
-        .select2-container--default .select2-search--dropdown .select2-search__field {
-            border: 1px solid #383838;
-        }
-
-        .select {
-            &__desc {
-                font-size: 14px;
-                line-height: 20px;
-                margin-top: 10px;
-            }
-        }
     }
 
     &__policy {
@@ -2814,8 +2695,8 @@ button {
             order: 0;
         }
 
-        .radio {
-            .radio-custom-label {
+        .checkbox {
+            .checkbox-custom-label {
                 font-size: 14px;
                 line-height: 19px;
                 margin-right: 0;
@@ -2829,7 +2710,7 @@ button {
                 }
             }
 
-            .radio-custom + .radio-custom-label:before {
+            .checkbox-custom + .checkbox-custom-label:before {
                 content: '';
                 background: transparent;
                 display: inline-block;
@@ -2839,22 +2720,21 @@ button {
                 width: 24px;
                 height: 24px;
                 background: rgba(255, 255, 255, 0.1);
-                border-radius: 50px;
+                border-radius: 2px;
                 margin-bottom: 0;
             }
 
-            .radio-custom:checked + .radio-custom-label:after {
-                content: "";
+            .checkbox-custom:checked + .checkbox-custom-label:after {
+                content: '';
                 position: absolute;
-                top: 5px;
-                left: 5px;
-                background: #07090f;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
+                top: 0;
+                left: 0;
+                background: url('../images/svg/check-white.svg') no-repeat;
+                width: 24px;
+                height: 24px;
             }
 
-            .radio-custom:checked + .radio-custom-label {
+            .checkbox-custom:checked + .checkbox-custom-label {
                 color: #ffffff;
             }
         }
@@ -2892,7 +2772,7 @@ button {
         z-index: 10;
     }
 
-    .radio {
+    .checkbox {
         opacity: 0;
         transition: opacity .2s;
     }
@@ -2929,7 +2809,7 @@ button {
         .dropdown-list {
         display: block;
         }
-        .radio {
+        .checkbox {
         transition: 2s opacity 2s;
         opacity: 1;
         }
@@ -2939,25 +2819,25 @@ button {
     }
 }
   
-.radio {
+.checkbox {
     margin-bottom: 20px;
 
     &:last-child {  
         margin-bottom: 0;
     }
 
-    .radio-custom {
+    .checkbox-custom {
         display: none;
     }
 
-    .radio-custom-label {
+    .checkbox-custom-label {
         display: inline-block;
         position: relative;
         vertical-align: middle;
         cursor: pointer;
     }
 
-    .radio-custom + .radio-custom-label:before {
+    .checkbox-custom + .checkbox-custom-label:before {
         content: '';
         background: transparent;
         display: inline-block;
@@ -2971,7 +2851,7 @@ button {
         margin-bottom: 0;
     }
 
-    .radio-custom:checked + .radio-custom-label:after {
+    .checkbox-custom:checked + .checkbox-custom-label:after {
         content: '';
         position: absolute;
         top: 0;
@@ -2980,7 +2860,7 @@ button {
         width: 20px;
         height: 20px;
     }
-    .radio-custom-label {
+    .checkbox-custom-label {
         font-size: 16px;
         line-height: 16px;
         margin-right: 0;
@@ -3023,7 +2903,7 @@ button {
     .button-3 {
         margin: auto;
     }
-}  
+}
 
 @-webkit-keyframes scroll {
     0% {
