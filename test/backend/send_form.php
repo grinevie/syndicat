@@ -14,11 +14,11 @@ $user = User::create(
     $_POST['Date'],
     $_POST['NickName'],
     $_POST['Phone'],
-    $_POST['Employment'],
+    implode(', ', $_POST['Employment']),
     $_POST['Sphere'],
     $_POST['Skills'],
     $_POST['Upgrade'],
-    $_POST['Interests'],
+    implode(', ', $_POST['Interests']),
     $_POST['Promocode']
 );
 
