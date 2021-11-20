@@ -18,6 +18,9 @@ const redirectUrl = 'success-page.html';
 form.onsubmit = (e) => {
 	e.preventDefault();
 	const formData = new FormData(form);
+    const interestsarr = formData.getAll("Interests[]");
+    const interestsstr = interestsarr.join(', ');
+    formData.set("Interests", interestsstr);
 	const json = JSON.stringify({...Object.fromEntries(formData), promocode: $("input#promocode").val()});
 
 	fetch(URL, {
