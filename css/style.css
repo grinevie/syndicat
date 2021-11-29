@@ -3133,3 +3133,48 @@ button:focus {
     transform: translateY(23px);
   }
 }
+.checkbox {
+  margin-bottom: 20px;
+}
+.checkbox:last-child {
+  margin-bottom: 0;
+}
+.checkbox .checkbox-custom {
+  display: none;
+}
+.checkbox .checkbox-custom-label {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.checkbox .checkbox-custom + .checkbox-custom-label:before {
+  content: "";
+  background: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  background: rgba(6, 9, 16, 0.1);
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+.checkbox .checkbox-custom:checked + .checkbox-custom-label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../images/svg/check.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.checkbox .checkbox-custom-label {
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 0;
+  margin-left: 0;
+  color: #060910;
+  margin-bottom: 0;
+}
