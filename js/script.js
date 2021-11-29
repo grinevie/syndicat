@@ -21,6 +21,9 @@ form.onsubmit = (e) => {
     const interestsarr = formData.getAll("Interests[]");
     const interestsstr = interestsarr.join(', ');
     formData.set("Interests", interestsstr);
+    const employmentarr = formData.getAll("Employment[]");
+    const employmentstr = employmentarr.join(', ');
+    formData.set("Employment", employmentstr);
 	const json = JSON.stringify({...Object.fromEntries(formData), promocode: $("input#promocode").val()});
 
 	fetch(URL, {
